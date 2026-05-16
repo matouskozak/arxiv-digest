@@ -205,13 +205,13 @@ def save_summary_to_tmp(paper: dict, summary_text: str) -> Path | None:
     return file_path
 
 
-def save_issue_to_tmp(title: str, body: str) -> Path | None:
+def save_issue_to_tmp(title: str, body: str, suffix: str = "") -> Path | None:
     """Save the issue content to tmp folder before posting to GitHub (local only)."""
     if is_running_in_ci():
         return None
     
     timestamp = get_timestamp()
-    filename = f"{timestamp}_issue.md"
+    filename = f"{timestamp}_issue{suffix}.md"
     
     content = f"# {title}\n\n{body}"
     

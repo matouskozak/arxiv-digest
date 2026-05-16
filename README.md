@@ -28,6 +28,7 @@ github:
   usernames:
     - "your-username" # Users to tag in the issue
   issue_label: "arxiv-summary"
+  max_papers_per_issue: 10 # Split into multiple issues when more papers are found
 
 llm_service:
   base_url: "https://models.github.ai/inference"

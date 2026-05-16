@@ -37,6 +37,7 @@ def main():
     github_config = config["github"]
     usernames = github_config.get("usernames", [])
     issue_label = github_config.get("issue_label", "arxiv-summary")
+    max_papers_per_issue = github_config.get("max_papers_per_issue", 10)
     
     openai_base_url = config["llm_service"]["base_url"]
     api_key = config["llm_service"]["api_key"]
@@ -84,7 +85,7 @@ def main():
     # 4. Create Issue
     print("--- Step 4: Creating GitHub Issue ---")
     try:
-        create_issue(github_client, summarized_papers, usernames, issue_label, last_run, end_date)
+        create_issue(github_client, summarized_papers, usernames, issue_label, last_run, end_date, max_papers_per_issue=max_papers_per_issue)
     except RuntimeError as e:
         print(f"Error: {e}")
         exit(1)

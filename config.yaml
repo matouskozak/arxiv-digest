@@ -19,6 +19,7 @@ github:
   usernames:
     - "matouskozak"
   issue_label: "arxiv-summary"
+  max_papers_per_issue: 10
 
 llm_service:
   base_url: "https://models.github.ai/inference"
