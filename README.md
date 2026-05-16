@@ -3,8 +3,8 @@
 A GitHub Actions workflow that fetches recent ArXiv papers, filters them using LLMs, summarizes them, and publishes the results as GitHub Issues.
 
 ## Features
-- **Smart Filtering**: Uses LLMs (e.g., GPT-5-mini) to score paper relevance (0-10) based on your keywords.
-- **Concise Summaries**: Generates high-quality summaries using capable models (e.g., GPT-5).
+- **Smart Filtering**: Uses LLMs (e.g., GPT-4.1-mini) to score paper relevance (0-10) based on your keywords.
+- **Concise Summaries**: Generates high-quality summaries using capable models (e.g., GPT-4.1).
 - **Flexible LLM Support**: Works with GitHub Models (default), OpenAI, Azure OpenAI, or any OpenAI-compatible API.
 - **Incremental Fetching**: Only fetches papers published since the last run to avoid duplicates.
 - **Daily Schedule**: Runs automatically every day at 07:00 UTC.
